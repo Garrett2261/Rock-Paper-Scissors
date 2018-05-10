@@ -13,7 +13,7 @@ namespace RockPaperScissors
 
         }
 
-        public void PickEitherRockPaperScissorsLizardOrSpock()
+        public void MakeAChoice()
         {
             Random rnd = new Random();
             int choice = rnd.Next(1, 5);
@@ -25,25 +25,30 @@ namespace RockPaperScissors
                     Console.ReadLine();
                     break;
 
+
                 case 2:
                     Console.Write("Paper");
                     Console.ReadLine();
                     break;
+
 
                 case 3:
                     Console.Write("Scissors");
                     Console.ReadLine();
                     break;
 
+
                 case 4:
                     Console.Write("Lizard");
                     Console.ReadLine();
                     break;
 
+
                 case 5:
                     Console.Write("Spock");
                     Console.ReadLine();
                     break;
+
 
                 default:
                     break;
