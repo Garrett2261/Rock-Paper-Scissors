@@ -15,7 +15,7 @@ namespace RockPaperScissors
 
         public void MakeAChoice()
         {
-            Console.Write("Do you choose Rock, Paper, Scissors, Lizard, or Spock?");
+            Console.Write("Rock, Paper, Scissors, Lizard, or Spock?");
             string choice = Console.ReadLine();
 
             switch (choice)

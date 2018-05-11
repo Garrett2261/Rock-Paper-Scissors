@@ -17,6 +17,7 @@ namespace RockPaperScissors
             Human Player1 = new Human();
             Player1.ChooseRockPaperScissorsLizardOrSpock();
             Player1.MakeAChoice();
+            Player1.Choices();
 
         }
     }

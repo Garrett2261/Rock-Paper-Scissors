@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AI.cs" />
+    <Compile Include="Choices.cs" />
     <Compile Include="Human.cs" />
     <Compile Include="Lizard.cs" />
     <Compile Include="Paper.cs" />

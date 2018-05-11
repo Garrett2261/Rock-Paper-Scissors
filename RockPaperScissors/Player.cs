@@ -27,8 +27,16 @@ namespace RockPaperScissors
             choices.Add("Scissors");
             choices.Add("Lizard");
             choices.Add("Spock");
+
+            foreach (string Choice in choices)
+            {
+
+            }
+
+            
         }
 
+        
 
     }
 }
