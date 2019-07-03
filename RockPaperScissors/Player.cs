@@ -6,38 +6,29 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissors
 {
-    public class Player
+    class Player
     {
-
-
-
-        public void ChooseRockPaperScissorsLizardOrSpock()
+        public Player()
         {
-            Console.Write("Choose Rock, Paper, Scissors, Lizard, or Spock.");
-            Console.ReadLine();
-
 
         }
 
-        public void Choices()
+        public int SetUpPlayers()
         {
-            List<string> choices = new List<string>();
-            choices.Add("Rock");
-            choices.Add("Paper");
-            choices.Add("Scissors");
-            choices.Add("Lizard");
-            choices.Add("Spock");
-
-            foreach (string Choice in choices)
+            Console.WriteLine("How many players will be playing the game? Please enter '1' or '2'.");
+            string numberOfPlayers = Console.ReadLine();
+            switch (numberOfPlayers)
             {
-
+                case "1":
+                    return 1;
+                case "2":
+                    return 2;
+                default:
+                    Console.WriteLine("Please enter '1' or '2'.");
+                    SetUpPlayers();
+                    return 0;
             }
-
-            
         }
-
-        
-
     }
 }
 

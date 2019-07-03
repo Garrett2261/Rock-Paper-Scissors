@@ -6,56 +6,67 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissors
 {
-    public class AI : Player 
+    class AI
     {
+        int score = 0;
         public AI()
         {
-
+            List<string> Choices = new List<string>();
         }
 
-        public void MakeAChoice()
+        public string MakeAChoice()
         {
+            Console.WriteLine("The computer will now make its selection.");
+            Console.ReadLine();
             Random rnd = new Random();
             int choice = rnd.Next(1, 5);
 
             switch (choice)
             {
                 case 1:
-                    Console.Write("Rock");
+                    Console.WriteLine("Rock");
                     Console.ReadLine();
-                    break;
+                    return "Rock";
 
 
                 case 2:
-                    Console.Write("Paper");
+                    Console.WriteLine("Paper");
                     Console.ReadLine();
-                    break;
+                    return "Paper";
 
 
                 case 3:
-                    Console.Write("Scissors");
+                    Console.WriteLine("Scissors");
                     Console.ReadLine();
-                    break;
+                    return "Scissors";
 
 
                 case 4:
-                    Console.Write("Lizard");
+                    Console.WriteLine("Lizard");
                     Console.ReadLine();
-                    break;
+                    return "Lizard";
 
 
                 case 5:
-                    Console.Write("Spock");
+                    Console.WriteLine("Spock");
                     Console.ReadLine();
-                    break;
+                    return "Spock";
 
 
                 default:
-                    break;
+                    return null;
                 
                 
             }
             
+        }
+        public int GetScore()
+        {
+            return score;
+        }
+        public void IncreaseScore()
+        {
+            score++;
         }
     }
 }

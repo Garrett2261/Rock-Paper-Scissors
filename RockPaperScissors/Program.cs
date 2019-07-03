@@ -10,14 +10,33 @@ namespace RockPaperScissors
     {
         static void Main(string[] args)
         {
-            AI Computer = new AI();
-            Computer.ChooseRockPaperScissorsLizardOrSpock();
-            Computer.MakeAChoice();
+            
+            {
+                Game Game = new Game();
+                Game.RunGame();
+                //Human Player1 = new Human();
+                //Player1.MakeAChoice();
 
-            Human Player1 = new Human();
-            Player1.ChooseRockPaperScissorsLizardOrSpock();
-            Player1.MakeAChoice();
-            Player1.Choices();
+
+                //AI Computer = new AI();
+                
+                //Computer.MakeAChoice();
+
+                ////if (true)
+                //{
+
+                //} 
+
+                
+
+                
+
+               
+
+
+
+                
+            }
 
         }
     }

@@ -6,25 +6,35 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissors
 {
-    public class Choices {
-
-        string[] ChoiceArray = new string[5];
-
-        public void PickAChoice()
+    public class Choices
+    {
+        public Choices()
         {
-            ChoiceArray[0] = "Rock";
-            ChoiceArray[1] = "Paper";
-            ChoiceArray[2] = "Scissors";
-            ChoiceArray[3] = "Lizard";
-            ChoiceArray[4] = "Spock";
+
+        }
+        public void PickWinner()
+        {
+            {
+               List<string> choices = new List<string>();
+                choices.Add("Rock");
+                choices.Add("Paper");
+                choices.Add("Scissors");
+                choices.Add("Lizard");
+                choices.Add("Spock");
+
+               
+
+                
+
+
+            }
+        }
+    }
         }
 
         
 
-       
-
-    } }
-    
+      
         
 
 

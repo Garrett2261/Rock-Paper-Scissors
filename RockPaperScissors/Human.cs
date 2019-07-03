@@ -6,46 +6,54 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissors
 {
-    public class Human : Player
+    class Human
     {
+        int score = 0;
         public Human()
         {
-
+            List<string> Choices = new List<string>();
         }
 
-        public void MakeAChoice()
+        public string MakeAChoice()
         {
-            Console.Write("Rock, Paper, Scissors, Lizard, or Spock?");
-            string choice = Console.ReadLine();
-
+            Console.WriteLine("Rock, Paper, Scissors, Lizard, or Spock?");
+            string choice = Console.ReadLine().ToLower();
+            
             switch (choice)
             {
-                case "Rock":
-                    Console.Write("Rock");
-                    
-                    break;
+                case "rock":
+                    Console.WriteLine("Rock");
+                    return "Rock";
+                case "paper":
+                    Console.WriteLine("Paper");
+                    return "Paper";
 
-                case "Paper":
-                    Console.Write("Paper");
-                    break;
+                case "scissors":
+                    Console.WriteLine("Scissors");
+                    return "Scissors";
 
-                case "Scissors":
-                    Console.Write("Scissors");
-                    break;
+                case "lizard":
+                    Console.WriteLine("Lizard");
+                    return "Lizard";
 
-                case "Lizard":
-                    Console.Write("Lizard");
-                    break;
-
-                case "Spock":
-                    Console.Write("Spock");
-                    break;
+                case "spock":
+                    Console.WriteLine("Spock");
+                    return "Spock";
 
                 default:
-                    Console.Write("Please choose only 'Rock', 'Paper', 'Scissors', 'Lizard', or 'Spock'.");
+                    Console.WriteLine("Please choose only Rock, Paper, Scissors, Lizard, or Spock.");
                     MakeAChoice();
-                    break;
+                    return null;
             }
+        }
+
+        public int GetScore()
+        {
+            return score;
+        }
+        public void IncreaseScore()
+        {
+            score++;
         }
     }
 }
