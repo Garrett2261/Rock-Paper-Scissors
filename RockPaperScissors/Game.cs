@@ -8,7 +8,7 @@ namespace RockPaperScissors
 {
     class Game
     {
-        Player Player = new Player();
+        //Player Player = new Player();
         int choiceIndexInList = 1;
         //Human Human = new Human();
         //AI AI = new AI();
@@ -26,7 +26,7 @@ namespace RockPaperScissors
         {
             int count = 0;
             ShowInstructions();
-            if(Player.SetUpPlayers() == 1)
+            if(SetUpPlayers() == 1)
             {
                 Human Human = new Human();
                 AI AI = new AI();
@@ -219,7 +219,7 @@ namespace RockPaperScissors
                     }
                 }
             }
-            else if(Player.SetUpPlayers() == 2)
+            else if(SetUpPlayers() == 2)
             {
                 Human HumanOne = new Human();
                 Human HumanTwo = new Human();
@@ -241,9 +241,24 @@ namespace RockPaperScissors
             string numberOfPlayers = Console.ReadLine();
 
         }
-
-        
+        public int SetUpPlayers()
+        {
+            Console.WriteLine("How many players will be playing the game? Please enter '1' or '2'.");
+            string numberOfPlayers = Console.ReadLine();
+            switch (numberOfPlayers)
+            {
+                case "1":
+                    return 1;
+                case "2":
+                    return 2;
+                default:
+                    Console.WriteLine("Please enter '1' or '2'.");
+                    SetUpPlayers();
+                    return 0;
+            }
         }
+
+    }
         }
     
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissors
 {
-    class Human
+    class Human: Player
     {
         int score = 0;
         public Human()
@@ -14,7 +14,7 @@ namespace RockPaperScissors
             List<string> Choices = new List<string>();
         }
 
-        public string MakeAChoice()
+        public override string MakeAChoice()
         {
             Console.WriteLine("Rock, Paper, Scissors, Lizard, or Spock?");
             string choice = Console.ReadLine().ToLower();

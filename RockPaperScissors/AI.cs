@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RockPaperScissors
 {
-    class AI
+    class AI: Player
     {
         int score = 0;
         public AI()
@@ -14,7 +14,7 @@ namespace RockPaperScissors
             List<string> Choices = new List<string>();
         }
 
-        public string MakeAChoice()
+        public override string MakeAChoice()
         {
             Console.WriteLine("The computer will now make its selection.");
             Console.ReadLine();
@@ -67,6 +67,11 @@ namespace RockPaperScissors
         public void IncreaseScore()
         {
             score++;
+        }
+
+        public override string MakeAChoice()
+        {
+            throw new NotImplementedException();
         }
     }
 }
